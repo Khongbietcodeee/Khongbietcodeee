@@ -1,0 +1,133 @@
+.Menu_mobile{
+    display: none;
+}
+
+.overlay_nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.3s;
+}
+
+.Nav_input{
+    display: none;
+}
+
+.Nav_mobile-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform linear 0.3s, opacity linear 0.3s;
+}
+
+.Nav_mobile-item{
+    padding: 25px;
+}
+
+.Nav_mobile-items{
+    border-bottom: 1px solid #ccc;
+    list-style-type: none;
+}   
+
+.Nav_mobile-link{
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #343434;
+    font-size: 15px;
+    
+    font-weight: bold;
+}
+
+.Close_icon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width : 1024px){
+   
+
+    #main{
+        overflow: hidden;
+    }
+    .Info{
+        padding: 25px 15px;
+    }
+
+    .Banner_img{
+        width: 100%;
+        
+    }
+
+    .New_banner_contact{
+        display: none;
+    }
+
+    .Menu_mobile{
+        display: block;
+        text-align: center;
+        font-size: 25px;
+        padding-bottom: 15px;
+        color: #343434;
+    }
+
+    .Navbar{
+        display: none;
+    }
+
+    .Slider{
+        display: none;
+    }
+
+    .Services{
+        display: none;
+    }
+
+    .Content_res{
+        padding-bottom: 15px;
+    }
+
+    .footers{
+        padding: 25px 15px;
+    }
+
+    .Footer_rows{
+        padding: 15px;
+        flex-direction: column;
+        row-gap: 15px;
+        text-align: center;
+    }
+
+    .Nav_input:checked ~ .overlay_nav{
+        display: block;
+    }
+
+    .Nav_input:checked ~ .Nav_mobile-list{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
